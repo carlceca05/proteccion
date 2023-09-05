@@ -1,0 +1,144 @@
+/** {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }*/
+  
+  
+  .popupBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 10;
+  }
+  
+  .popupBox__content {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    background: #fff;
+    
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .popupBox__img {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popupBox__img img{
+    width: 90%;
+  }
+  
+  .popupBox__img::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+  }
+  
+  .popupBox__img img {
+    position: relative;
+    max-width: 400px;
+    z-index: 1;
+  }
+  
+  .popupBox__contentTwo {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popupBox__title {
+    color: #333;
+    line-height: 1em;
+    font-weight: 300;
+    font-size: 2em;
+  }
+  /*
+  .popupBox__titleTwo {
+    font-size: 2.3em;
+    color: #BD8D24;
+    line-height: 1em;
+  }*/
+  
+  .popupBox__titleTwo span {
+    color: #333;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+  /*
+  .popupBox__description {
+    font-weight: 300;
+  }*/
+  
+  .popupBox__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1b87fb;
+    text-decoration: none;
+    color: #000;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f3f3f3 url(https://www.pikpng.com/pngl/m/302-3024308_close-icon-png-x-png-icon-clipart.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  @media (max-width: 768px) {
+    .popupBox__content {
+      width: 300px;
+      height: auto;
+      flex-direction: column;
+    }
+    .popupBox__img {
+      height: 200px;
+      transform: translateY(-50px);
+    }
+    .popupBox__contentTwo {
+      height: auto;
+      text-align: center;
+      padding: 20px;
+      padding-top: 0;
+    }
+    .popupBox__img::before {
+      background: #fff;
+    }
+    .close {
+      top: -50px;
+      right: -10px;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      background-position: center;
+    }
+  }
+  .credit a{
+    text-decoration: none;
+    color: #0162c8;
+  }
+  .credit {
+      margin-top: 10px;
+  }
+  
+  

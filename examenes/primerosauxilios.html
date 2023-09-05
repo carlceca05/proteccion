@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title> Primeros Auxilios </title>
+    <meta name="description" content="Evaluación para acreditación de primeros auxilios">
+    <meta name="keywords" content=" ">
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/ico" href="../img/convocatoria-unam_favicon.ico">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-144.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/apple-touch-icon-57.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/examenes.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/mensaje.css">
+    <!--<link rel="stylesheet" href="offerAlertStyle.css" />-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preload" as="style" type="text/css" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style>
+        label{
+            display: flex !important;
+        }
+    
+    </style>
+</head>
+
+<body style="background-image:  linear-gradient(217deg, rgba(255,255,255,.8), rgba(255,255,255,0.8) 100%), url(img/fondo-cuaderno.png);" oncontextmenu="return false;">
+    <div class="overheader hide">
+        <header id="header" class="header">
+            <div class="header-wrapper">
+                <!--navegacion-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                    <div class="container ">
+                        <a class="navbar-brand" href="../index.html">
+                            <img class="img-fluid " title="convocatoria UNAM" src="../img/convocatoria-unam_logo.webp" alt="convocatoriaUNAM" width="90" height="auto">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="../index.html"> Inicio </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="../index.html#cronograma">Calendario</a>
+                                </li>
+                                <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cursos </a>
+                                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                        <!--<li class=""><a class="dropdown-item " href="aulavirtual.html">  Aula Virtual</a></li>-->
+                                        
+                                        <li><a class="dropdown-item " href="cursoenlinea.html">Curso en línea</a></li>
+                                    
+                                    </ul>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="../guiasunam.html">Guías</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="../aciertosunam.html">Aciertos</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="index.html">Simulacros</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="https://convocatoriaunam.com.mx/blog">Blog</a>
+                                </li>
+                                <li class="nav-item cuadrada d-flex ">
+                                    <a class="nav-link" target="_blank" href="https://www.facebook.com/convocatoriaUNAM">
+                                        <i class="bi bi-facebook">   </i> 
+                                    </a>&nbsp;&nbsp;&nbsp;
+                                    <a class="nav-link" target="_blank" href="https://www.instagram.com/convocatoria.unam/">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>&nbsp;&nbsp;&nbsp;
+                                    <a class="nav-link" target="_blank" href="https://www.tiktok.com/@convocatoriaunam">
+                                        <img src="../img/tik-tok.svg"  class="img-fluid" width="14px" height="14px" alt="convocatoriaUNAM" style="margin-bottom:3px;" >
+                                    </a>&nbsp;&nbsp;&nbsp;
+                                    <a class="nav-link" target="_blank" href="https://www.youtube.com/channel/UCeM7AT5Xdhm-kvbNhKyKKYw">
+                                        <i class="bi bi-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="c-body">
+                    <div class="c-time">
+                        <div class="screen p-2">
+                            <p class="mb-0 text-center text-white"> Tiempo Transcurrido  </p>
+                            <span class="text-center" id="time">00:00:00.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+    </div>
+    
+    <script src="js/jquery-3.5.1.min.js"></script>
+            <style>
+            /* VENTANA MODAL */
+            .pop-up{
+                background: rgba(48, 48, 48, 0.5);
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                z-index: 1999;
+            }
+            .pop-up-wrap{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                max-width: 70%;
+                transform: scale(0.6);
+                opacity: 0;
+                transition: .3s ease all;
+                background-color: white;
+                /*background-image: url(img/examensimulacro/popup.png);*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .pop-up-title{
+                flex-basis: 0;
+                flex-grow:1.5;
+                height: 70%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .subcription{
+                flex-basis: 0;
+                flex-grow: 1.5;
+                height: ;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .sub-content{
+                width: 85%;
+            }
+            #close{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                font-size: 25px;
+                color:#BD8D24;
+                cursor: pointer;
+            }
+            .pop-up.show{
+                visibility: visible;
+            }
+            .pop-up-wrap.show{
+                transform: scale(1);
+                opacity: 1;
+            }
+            @media only screen and (max-width: 980px){
+                .pop-up-title{
+                    display: none;
+                }
+            }
+            @media only screen and (max-width: 500px){
+                .subcription{
+                    height: 600px;
+                    overflow: auto;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+            @media only screen and (min-width:900px) and (max-width:1200px) {
+                .subcription{
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+            </style>
+            
+            <!--
+            <div class="pop-up">
+                <div class="pop-up-wrap "  >
+                    <div class="pop-up-title">
+                        <div class="py-5">
+                            <img class="" src="img/promocion-curso.png" width="100%" alt="">
+                        </div>
+                    </div>
+                    <div class="subcription   ">
+                        <i class="bi bi-x-circle" id="close"></i> 
+                        <div class="sub-content">
+                            <div class="d-block d-lg-none">
+                                <img src="img/promocion-curso.png" width="100%" alt="">
+                            </div>
+                            <h4 class="text-uppercase llenita text-secondary text-center comienza"> ¡Comienza tu capacitación ahora! </h4>
+                            <p class="text-center">  No pierdas más tiempo aprovecha esta increíble promoción que tenemos para ti, y <strong class="text-primary">¡Aumenta tus posibilidades de obtener un lugar dentro de la UNAM!</strong> </p>
+                            <div class="small">
+                                <h5 class=" text-center">Método de compra</h5>
+                                <div class="row row-cols-1 row-cols-lg-2 small">
+                                    <div class="col ">
+                                        <h6 class="mb-1 mb-lg-0  " > Paso 1: Realizar pago</h6>
+                                        <p class="mb-0 text-primary fw-bold">Pagos en OXXO, 7Eleven, BBVA Bancomer</p>
+                                        <p class="mb-1 mb-lg-0"> <b class="fw-bold">Tarjeta:</b> 4152 3137 2688 5655</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0 text-primary fw-bold">Depósito Bancario BBVA Bancomer</p>
+                                        <p class="mb-0"> <b class="fw-bold"> Cuenta:</b> 0475813824  </p>
+                                        <p class="mb-0"> <b class="fw-bold">Clabe:</b> 012180004758138248</p>
+                                        <p class="mb-0"> <b class="fw-bold">Tarjeta:</b> 4152 3137 2688 5655</p>
+                                    </div>
+                                </div>
+                                <h6 class="mb-1 mb-lg-0 mt-2">Paso 2: Contáctanos </h6>
+                                <p class="small">Envíanos tu comprobante de pago y tus datos (Nombre completo, correo electrónico, teléfono y localidad) a <a class="fw-bold" target="_blank" href="mailto:info@convocatoriaunam.com.mx"> info@convocatoriaunam.com.mx</a> o bien    <a class="fw-bold" target="_blank" href="https://bit.ly/3LNwkTS" >  <i class="bi bi-whatsapp "></i>   55 5818 1083 </a><p>
+                                <h6 class="mb-1 mb-lg-0">Paso 3: Recibe tu acceso </h6>
+                                <p class="small">Te enviaremos por correo tu acceso único para que puedas ingresar a nuestra plataforma.</p>
+                                    <p class="text-center small"><a class="btn btn-primary text-white"  target="_blank" href="https://bit.ly/3LNwkTS"> Contáctanos </a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    function showPopup(){
+                        $('.pop-up').addClass('show');
+                        $('.pop-up-wrap').addClass('show');
+                    }
+                    $("#close").click(function(){
+                        $('.pop-up').removeClass('show');
+                        $('.pop-up-wrap').removeClass('show');
+                    });
+                    $(".btn-abrir").click(showPopup);
+                    setTimeout(showPopup, 10000);
+                });
+            </script>
+            -->
+            <script src="js/main.js"></script>
+        
+    
+    
+    
+   
+    <div class="examContainer"  >
+        <div class="home-box  p-4">
+            <div class="homeTitle mb-4">
+                <h1 class=" text-center text-uppercase " style="font-weight: 900;  ">  Examen Simulacro <br>  <span class="text-primary">UNAM Área 1</span></h1>
+            </div>
+            <div class="homeContainer d-flex mb-4">
+                <div class=""  style="margin-left: auto;margin-right:auto;">
+                    <p class=" fs-5">Total de preguntas: <span>120</span> </p>
+                    <p class=" fs-5">Límite de Tiempo: <span>3:00 hrs</span></p>
+                    <div class="cronometro fs-5">
+                        <p class=" mb-0">Cronómetro:</p>
+                        <div class="inputc">
+                            <input type="radio" name="clock" id="" checked>
+                            <span class="">Sí</span>
+                            <!--<input type="radio" name="clock" id="no-c" disabled>
+                            <span class="">No</span>-->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="buttondx text-center">
+                <button class="btn btn-primary text-white px-5 shadow" onclick="testStart()">¡Comenzar Ya!</button>
+            </div>
+        </div>
+        <div class="containerMain hide ">
+            <h1 class="text-primary text-center text-uppercase " style="font-weight: 800;">Examen UNAM <span class="text-secondary">Área 1</span></h1>
+            <section id="juego">
+
+            </section>
+            <p class="text-center"><button id="corregir"  class="btn btn-primary px-5 text-white shadow"  onclick="corregirxd()">Resultado</button></p>
+            <div class="buttonfinal hide">
+                <div class="buttonpop">
+                    <button id="buttonfinal"  class="btn btn-secondary text-white shadow"  onclick="location.reload()">Intentar de nuevo</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="result-box hide bg-secondary">
+            <div class="homeTitlexd mb-4 text-white text-center" id="homeTitle">
+            </div>
+            <div class="buttonxd  text-center">
+                <button  class="btn btn-primary text-white shadow mb-3"  onclick="verRespuesta()">Ver respuestas</button>
+                <button  class="btn btn-primary text-white shadow mb-3"  onclick="location.reload()">Intentar de nuevo</button>
+            </div>
+        </div>
+    </div>
+
+    <!--seccion footer-->
+    <section class="container-fluid bg-light containerFoo hide">
+        <div class="container pt-5">
+            <div class="row row-cols-1 row-cols-lg-4">
+                <div class="col mb-4 text-center text-lg-start">
+                    <a href="../index.html">
+                        <!--
+                        <img src="img/convocatoria_ceneval_logo.png"  class="img-fluid logofooter"  alt="">-->
+                        <picture >
+                            <source class="lazyload logofooter" type="image/webp" srcset="../img/convocatoria-unam_logo.webp">
+                            <img class="lazyload logofooter" src="../img/convocatoria-unam_logo.png" alt=" " >
+                        </picture>
+                    </a>
+                </div>
+                <div class="col mb-4 text-center text-lg-start">
+                    <h6>SECCIONES</h6>
+                    <small class="text-muted">
+                        <p class="mb-0">Calendario</p>
+                        <p class="mb-0">Capacitación</p>
+                        <p class="mb-0">Sesiones</p>
+                        <p class="mb-0">Blog</p>
+                    </small>
+                </div>
+                <div class="col mb-4 text-center text-lg-start">
+                    <h6>BLOG</h6>
+                    <small class="text-muted">
+                        <p class="mb-0">Últimas entradas</p>
+                        <p class="mb-0">Categorias</p>
+                    </small>
+                </div>
+                <div class="col mb-4 text-center text-lg-start">
+                    <h6>CONTACTO</h6>
+                    <small class="text-muted mb-0">
+                        <p class="mb-0"> <i class="bi bi-whatsapp mb-0"></i>    (55) 5818-1083 | 6271-7532</p>
+                    </small>
+                    <p class="text-muted small">Quieres trabajar con nosotros? </p>
+                </div>
+            </div>
+            <h5 class="mt-4 text-center text-lg-start">PAGINAS AMIGAS</h5>
+            <div class="row row-cols-2 row-cols-lg-4 pt-4 mb-0 " style="max-width: 900px; margin-left: auto; margin-right: auto; ">
+                <div class="col m-auto text-center mb-4">
+                    <a href="https://www.facebook.com/convocatoriaUAM/">
+                        <!--<img class="img-fluid w-75 redonda shadow"  width="" src="img/3.png" alt="convocatoria uam">-->
+                        <picture>
+                            <source class=" img-fluidlazyload redonda shadow colaboradores" type="image/webp" width="125px" title="convocatoriaceneval" data-srcset="../img/convocatoriauam.webp" alt="convocatoriauam">
+                            <img class=" img-fluid lazyload redonda shadow colaboradores" type="image/png" width="125x" src="../img/convocatoriauam.png" title="convocatoriaceneval" alt="convocatoriauam">
+                        </picture>
+                    </a>
+                </div>
+                <div class="col m-auto text-center mb-4">
+                    <a href="https://convocatoriaceneval.com.mx">
+                        <picture>
+                            <!--
+                            <source class=" img-fluidlazyload redonda shadow colaboradores" type="image/webp" width="125px" title="convocatoriaceneval" data-srcset="img/.webp" alt="convocatoriaunam">-->
+                            <img class="img-fluid  redonda shadow colaboradores" src="../img/convocatoriaceneval.png" width="125px" alt="convocatoria ceneval">
+                        </picture>
+                        <!--<img class="img-fluid  redonda shadow lazyload" data-src="img/convocatoriaunam.png" width="125px" alt="convocatoria unam">-->
+                    </a>
+                </div>
+                <div class="col m-auto text-center mb-4">
+                    <a href="https://convocatoriacomipems.com.mx">
+                        <picture>
+                            <source class=" img-fluid lazyload redonda shadow colaboradores" type="image/webp" width="125px" title="convocatoriaceneval" data-srcset="../img/convocatoriacomipems.webp" alt="convocatoriacomipems">
+                            <img class=" img-fluid lazyload redonda shadow colaboradores" type="image/png" width="125x" src="../img/convocatoriacomipems.png" title="convocatoriaceneval" alt="convocatoriacomipems">
+                        </picture>
+                        <!--<img class="img-fluid  redonda shadow lazyload" data-src="img/convocatoriacomipems.png" width="125px" alt="convocatoria comipems">-->
+                    </a>
+                </div>
+                <div class="col m-auto text-center mb-4">
+                    <a href="https://www.facebook.com/cnvocatoriaIPN">
+                        <picture>
+                            <source class=" img-fluidlazyload redonda shadow colaboradores" type="image/webp" width="125px" title="convocatoriaceneval" data-srcset="../img/convocatoriaipn.webp" alt="convocatoriaipn">
+                            <img class=" img-fluid lazyload redonda shadow colaboradores" type="image/png" width="125x" src="../img/convocatoriaipn.png" title="convocatoriaipn" alt="convocatoriaunam">
+                        </picture>
+                        <!--<img class="img-fluid  redonda shadow lazyload" data-src="img/convocatoriaipn.png" width="125px" alt="convocaotiria ipn">-->
+                    </a>
+                </div>
+            </div>
+            <p class="text-center text-muted mb-5"> <small> Todas las imágenes y logotipos de terceros fueron usados con fines informativos</small></p>
+                <div class="row row-cols-1 row-cols-lg-3 mb-2">
+                    <div class="col">
+                        <p class="text-center text-muted text-lg-start  mb-0">Convocatoria UNAM 2023</p>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+                        <p class="text-center  text-lg-end mb-0 small"><a href="../politica_privacidad.html" class=" text-decoration-none text-muted"> Política de Privacidad</a> </p>
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+
+
+
+    <script src="js/a1-v1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" async></script>
+    <script src="js/popup.js"></script>
+
+</body>
+
+</html>
